@@ -3,22 +3,22 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import Mock from 'mockjs';
 import Event from './lib/EventEmitter';
-import POKE from './asserts/K';
+import Boss from './asserts/B';
 class App extends Component{
     constructor() {
         super();
-        this.K = new POKE();
+        this.B = new Boss();
         this.E = new Event();
-        this.E.on('see', () => {
-            this.K.dealCards();
+        this.E.on('init', () => {
+            this.B.dealCards();
         })
         this.dealCards = this.dealCards.bind(this);
     }
     componentDidMount() {
-        this.E.emit('see');
+        this.E.emit('init');
     }
     dealCards () {
-        this.K.dealCards();
+        this.B.dealCards();
     }
     render() {
         return (<div>

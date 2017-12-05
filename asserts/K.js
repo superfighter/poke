@@ -34,17 +34,18 @@ class POKE {
         console.warn('没有' + curColor + '花色牌了，重新选择花色');
         return setTimeout(() => {
           this.dealCards()
-        }, 3000);
+        }, 1500);
       }
       const curSeed = this.getRand(this.seed[curColor]);
       if (this.poke[curColor][curSeed]) {
         console.log('发了' + curColor + '花色的' + this.poke[curColor][curSeed]);
-        this.poke[curColor].splice(curSeed, 1);
+        const out = this.poke[curColor].splice(curSeed, 1);
         this.calcTotal(-1);
         this.calcSeed(curColor, -1);
         console.log(this.seed);
         console.log(this.poke[curColor]);
         console.log('剩余' + this.total + '张');
+        return out;
       } else {
         console.log('要发的牌没有了');
       }
