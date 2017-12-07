@@ -5,6 +5,8 @@ class Owner {
   constructor(option) {
     console.info('===<加载参与者>===');
     this.name = option && option.name || 'robots';
+    this.points = 0;
+    this.pokes = [];
     this.init();
   }
   init() {

@@ -20,8 +20,17 @@ class Boss {
     });
     console.log(this.player);
   }
-  dealCards() {
-    this.K.dealCards();
+  initCards() {
+    console.log('庄发初始牌了');
+  }
+  dealCards(to) {
+    if (this.player[to].pokes.length === 5) {
+      console.log('玩家['+ to +']手中的牌达到5张上限无法再获取更多牌！');
+      return false;
+    }
+    const poke = this.K.dealCards();
+    this.player[to].pokes.push(poke);
+    console.log('发「' + poke + '」牌给' + to);
   }
 }
 
