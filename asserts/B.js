@@ -21,11 +21,20 @@ class Boss {
     console.log(this.player);
   }
   initCards() {
-    console.log('庄发初始牌了');
+    console.log('庄发初始牌了~~~');
+  }
+  sum(ary) {
+      if (!ary.length) return 0;
+      const reducer = (accumulator, currentValue) => accumulator + currentValue;
+      return ary.reduce(reducer);
   }
   dealCards(to) {
     if (this.player[to].pokes.length === 5) {
-      console.log('玩家['+ to +']手中的牌达到5张上限无法再获取更多牌！');
+      console.warn('玩家['+ to +']手中的牌达到5张上限无法再获取更多牌！');
+      return false;
+    }
+    if (this.sum(this.player[to].pokes) > 21) {
+      console.warn('玩家['+ to +']手牌总值暴点21了无法再获取更多牌！');
       return false;
     }
     const poke = this.K.dealCards();
