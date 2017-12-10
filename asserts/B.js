@@ -18,9 +18,15 @@ class Boss {
         name: 'robots' + data
       });
     });
+    this.player.unshift(new Owner({
+      name: 'Boss'
+    }))
     console.log(this.player);
   }
   initCards() {
+    this.player.map(data => {
+      data.pokes = []
+    })
     console.log('庄发初始牌了~~~');
   }
   sum(ary) {
