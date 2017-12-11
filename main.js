@@ -27,7 +27,7 @@ class App extends Component{
         this.B = new Boss();
         this.E = new Event();
         this.E.on('init', () => {
-            this.initCards();
+            this.B.initCards();
             this.handleDealCards();
         })
         this.dealCards = this.dealCards.bind(this);
@@ -49,8 +49,7 @@ class App extends Component{
         return this.B.sum(ary);
     }
     initCards() {
-        this.B.initCards();
-        this.handleDealCards();
+        this.E.emit('init');
     }
     render() {
         return (<div>

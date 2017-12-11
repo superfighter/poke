@@ -28,11 +28,26 @@ class Boss {
       data.pokes = []
     })
     console.log('庄发初始牌了~~~');
+    this.roulette(2);
+  }
+  roulette(num) {
+    if (num === 0 || isNaN(num)) {
+      console.warn('无效的发牌轮次');
+      return false;
+    } else {
+      let i = 0;
+      for (;i < num; i++) {
+        this.player.map((data, key) => {
+          this.dealCards(key);
+        })
+      }
+    }
   }
   sum(ary) {
       if (!ary.length) return 0;
+      let materialAry = ary.map(data => data * 1 > 10 ? 10 : data * 1);
       const reducer = (accumulator, currentValue) => accumulator + currentValue;
-      return ary.reduce(reducer);
+      return materialAry.reduce(reducer);
   }
   dealCards(to) {
     if (this.player[to].pokes.length === 5) {
