@@ -4,6 +4,7 @@ import axios from 'axios';
 import Mock from 'mockjs';
 import Event from './lib/EventEmitter';
 import Boss from './asserts/B';
+import './asserts/app.css';
 class App extends Component{
     constructor() {
         super();
@@ -54,6 +55,8 @@ class App extends Component{
     render() {
         return (<div>
             <div >
+                <div className="heart" />
+                <div className="heart heart2" />
                 <div>
                     <a href="javascript: void 0" onClick={this.initCards}>庄发初始牌</a>
                 </div>
