@@ -57,6 +57,8 @@ class App extends Component{
             <div >
                 <div className="heart" />
                 <div className="heart heart2" />
+                <div className="diamond" />
+                <div className="club" />
                 <div>
                     <a href="javascript: void 0" onClick={this.initCards}>庄发初始牌</a>
                 </div>

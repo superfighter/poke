@@ -1,29 +1,72 @@
 .heart {
-           background-color: red;
-           display: inline-block;
-           height: 10px;
-           margin: 0 4px;
-           position: relative;
-           top: 0;
-           transform: rotate(-45deg);
-           width: 10px;
-           margin-top: 5px;
-           text-align: center;
-       }
-       .heart:before,
-       .heart:after {
-           content: "";
-           background-color: red;
-           border-radius: 50%;
-           height: 10px;
-           position: absolute;
-           width: 10px;
-       }
-       .heart:before {
-           top: -5px;
-           left: 0px;
-       }
+    background-color: red;
+    display: inline-block;
+    height: 10px;
+    margin: 0 4px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+.heart:before,
+.heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+}
+.heart:before {
+    top: -5px;
+    left: 0px;
+}
 
-.heart2{
-  transform: rotate(135deg);
+.heart2 {
+    transform: rotate(135deg);
+    background-color: black;
+}
+.heart2:before,
+.heart2:after{
+    background-color: black;
+}
+.diamond {
+    background-color: red;
+    display: inline-block;
+    height: 12px;
+    margin: 0 4px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+.club {
+    background-color: black;
+    display: inline-block;
+    height: 10px;
+    position: relative;
+    top: -5px;
+    margin: 0 4px;
+    width: 10px;
+    text-align: center;
+    border-radius: 50%;
+}
+.club::after,
+.club::before{
+    content: "";
+    background-color: black;
+    border-radius: 50%;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    top: 7px;
+}
+.club::before{
+    left: -5px;
+}
+.club::after {
 }
