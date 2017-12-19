@@ -55,10 +55,13 @@ class App extends Component{
     render() {
         return (<div>
             <div >
-                <div className="heart" />
+                {/* <div className="heart" />
                 <div className="heart heart2" />
-                <div className="diamond" />
-                <div className="club" />
+                <div className="diamond" />*/}
+                
+                <div className="bing">
+                    <div className="club" />
+                </div>
                 <div>
                     <a href="javascript: void 0" onClick={this.initCards}>庄发初始牌</a>
                 </div>

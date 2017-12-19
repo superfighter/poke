@@ -47,26 +47,54 @@
 .club {
     background-color: black;
     display: inline-block;
-    height: 10px;
+    height: 20px;
     position: relative;
-    top: -5px;
-    margin: 0 4px;
-    width: 10px;
+    top: -10px;
+    margin: 0 3px;
+    width: 20px;
     text-align: center;
     border-radius: 50%;
+    z-index: 999;
+    left: 2px;
 }
 .club::after,
 .club::before{
     content: "";
     background-color: black;
     border-radius: 50%;
-    height: 10px;
+    height: 20px;
     position: absolute;
-    width: 10px;
-    top: 7px;
+    width: 20px;
+    top: 14px;
 }
 .club::before{
-    left: -5px;
+    left: -8px;
 }
 .club::after {
+    left: 8px;
+}
+.bing{
+  width: 30px;
+  height: 30px;
+  background: black;
+  position: relative;
+  /*overflow: hidden;*/
+}
+.bing::after{
+  content: ' ';
+  position: absolute;
+  background:#FFF;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  border-radius: 50%;
+}
+.bing::before{
+  content: ' ';
+  position: absolute;
+  background: #FFF;
+  width: 100%;
+  height: 100%;
+  right: 50%;
+  border-radius: 50%;
 }
