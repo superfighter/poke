@@ -58,9 +58,21 @@ class App extends Component{
                 {/* <div className="heart" />
                 <div className="heart heart2" />
                 <div className="diamond" />*/}
-                
-                <div className="bing">
-                    <div className="club" />
+                <div className="pokeman shapeClub">
+                    <div className="numTop">A</div>
+                    <div className="shape">
+                        <div className="bing" />
+                        <div className="club" />
+                    </div>
+                    <div className="numBtm">A</div>
+                </div>
+                <div className="pokeman shapeHeart">
+                    <div className="numTop">2</div>
+                    <div className="shape">
+                        <div className="bing" />
+                        <div className="heart heart2" />
+                    </div>
+                    <div className="numBtm">2</div>
                 </div>
                 <div>
                     <a href="javascript: void 0" onClick={this.initCards}>庄发初始牌</a>

@@ -1,12 +1,12 @@
 .heart {
     background-color: red;
     display: inline-block;
-    height: 10px;
+    height: 20px;
     margin: 0 4px;
     position: relative;
     top: 0;
     transform: rotate(-45deg);
-    width: 10px;
+    width: 20px;
     margin-top: 5px;
     text-align: center;
 }
@@ -15,12 +15,12 @@
     content: "";
     background-color: red;
     border-radius: 50%;
-    height: 10px;
+    height: 20px;
     position: absolute;
-    width: 10px;
+    width: 20px;
 }
 .heart:before {
-    top: -5px;
+    top: -9px;
     left: 0px;
 }
 
@@ -73,19 +73,25 @@
 .club::after {
     left: 8px;
 }
+.shape{
+  position: relative;
+  margin: 14% auto;
+  width: 40%;
+}
 .bing{
   width: 30px;
-  height: 30px;
+  height: 15px;
   background: black;
-  position: relative;
-  /*overflow: hidden;*/
+  position: absolute;
+  bottom: -7px;
+  transform: rotate(180deg) translateZ(0);
 }
 .bing::after{
   content: ' ';
   position: absolute;
   background:#FFF;
   width: 100%;
-  height: 100%;
+  height: 30px;
   left: 50%;
   border-radius: 50%;
 }
@@ -94,7 +100,30 @@
   position: absolute;
   background: #FFF;
   width: 100%;
-  height: 100%;
+  height: 30px;
   right: 50%;
   border-radius: 50%;
+}
+.pokeman{
+    width: 80px;
+    border: 1px solid darkblue;
+    border-radius: 10px;
+    height: 100px;
+    font-family: serif;
+}
+.pokeman .numTop, .pokeman .numBtm{
+  padding: 3px 5px;
+}
+.pokeman .numBtm{
+  transform: rotate(180deg);
+}
+.shapeHeart .heart2{
+  transform: translateX(1px) translateY(-2px) rotate(135deg);
+}
+.shapeHeart .shape{
+  margin: 10% auto;
+}
+.shapeHeart .heart2:after{
+  top: 0;
+  left: 9px;
 }
