@@ -1,4 +1,4 @@
-.heart {
+.heart, .loyalty {
     background-color: red;
     display: inline-block;
     height: 20px;
@@ -11,7 +11,9 @@
     text-align: center;
 }
 .heart:before,
-.heart:after {
+.heart:after,
+.loyalty:before,
+.loyalty:after {
     content: "";
     background-color: red;
     border-radius: 50%;
@@ -19,7 +21,8 @@
     position: absolute;
     width: 20px;
 }
-.heart:before {
+.heart:before,
+.loyalty:before {
     top: -9px;
     left: 0px;
 }
@@ -123,7 +126,27 @@
 .shapeHeart .shape{
   margin: 10% auto;
 }
+.shapeDiamond .shape{
+  margin: 10% auto;
+}
 .shapeHeart .heart2:after{
   top: 0;
   left: 9px;
+}
+.shapeDiamond .diamond{
+    width: 28px;
+    height: 28px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 2px;
+}
+.shapeDiamond .shape{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.shapeLoyalty .shape{
+  margin: 10% auto;
+}
+.shapeLoyalty .loyalty{
+  margin: 10% 6px;
 }

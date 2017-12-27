@@ -66,6 +66,20 @@ class App extends Component{
                     </div>
                     <div className="numBtm">A</div>
                 </div>
+                <div className="pokeman shapeDiamond">
+                    <div className="numTop">3</div>
+                    <div className="shape">
+                        <div className="diamond" />
+                    </div>
+                    <div className="numBtm">3</div>
+                </div>
+                <div className="pokeman shapeLoyalty">
+                    <div className="numTop">4</div>
+                    <div className="shape">
+                        <div className="loyalty" />
+                    </div>
+                    <div className="numBtm">4</div>
+                </div>
                 <div className="pokeman shapeHeart">
                     <div className="numTop">2</div>
                     <div className="shape">
