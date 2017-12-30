@@ -4,6 +4,7 @@ import axios from 'axios';
 import Mock from 'mockjs';
 import Event from './lib/EventEmitter';
 import Boss from './asserts/B';
+import P from './asserts/P';
 import './asserts/app.css';
 class App extends Component{
     constructor() {
@@ -58,6 +59,8 @@ class App extends Component{
                 {/* <div className="heart" />
                 <div className="heart heart2" />
                 <div className="diamond" />*/}
+                <P shape="Diamond" num="9"/>
+                {/*
                 <div className="pokeman shapeClub">
                     <div className="numTop">A</div>
                     <div className="shape">
@@ -73,7 +76,7 @@ class App extends Component{
                     </div>
                     <div className="numBtm">3</div>
                 </div>
-                <div className="pokeman shapeLoyalty">
+                <div className="pokeman shapeLoyalty animate1">
                     <div className="numTop">4</div>
                     <div className="shape">
                         <div className="loyalty" />
@@ -88,6 +91,7 @@ class App extends Component{
                     </div>
                     <div className="numBtm">2</div>
                 </div>
+                */}
                 <div>
                     <a href="javascript: void 0" onClick={this.initCards}>庄发初始牌</a>
                 </div>

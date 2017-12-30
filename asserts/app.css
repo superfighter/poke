@@ -150,3 +150,18 @@
 .shapeLoyalty .loyalty{
   margin: 10% 6px;
 }
+/** poke animate **/
+.animate1 {
+  animation: a1 2s forwards ease-in;
+  transform: translate(400px)
+}
+@keyframes a1{
+  from {
+    /*margin-left: 0;*/
+    transform: rotate(0) scale(0) translateX(0) translateY(0)
+  }
+  to {
+    /*margin-left: 100px;*/
+    transform: rotate(1080deg) scale(1) translateX(100px) translateY(50px)
+  }
+}
