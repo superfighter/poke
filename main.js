@@ -36,7 +36,7 @@ class App extends Component{
         this.initCards = this.initCards.bind(this);
     }
     componentDidMount() {
-        this.E.emit('init');
+        // this.E.emit('init');
     }
     handleDealCards() {
         this.setState({
@@ -54,78 +54,104 @@ class App extends Component{
         this.E.emit('init');
     }
     render() {
+        let styles = {
+
+        }
         return (<div>
-            <div >
+                <div className="pannel">
+                    <div className="banker">
+                        <div className="img" />
+                        <div className="name" />
+                    </div>
+                    <div className="customer">
+                        <div className="position" data-index="1">
+                        </div>
+                        <div className="position" data-index="2">
+                            <div className="img" />
+                            <div className="name" />
+                        </div>
+
+                        <div className="position" data-index="3">
+                        </div>
+
+                        <div className="position" data-index="4">
+                        </div>
+
+                        <div className="position" data-index="5">
+                        </div>
+                    </div>
+                </div>
                 {/* <div className="heart" />
                 <div className="heart heart2" />
                 <div className="diamond" />*/}
                 <P shape="Diamond" num="9"/>
                 {/*
-                <div className="pokeman shapeClub">
-                    <div className="numTop">A</div>
-                    <div className="shape">
-                        <div className="bing" />
-                        <div className="club" />
+                    <div className="pokeman shapeClub">
+                        <div className="numTop">A</div>
+                        <div className="shape">
+                            <div className="bing" />
+                            <div className="club" />
+                        </div>
+                        <div className="numBtm">A</div>
                     </div>
-                    <div className="numBtm">A</div>
-                </div>
-                <div className="pokeman shapeDiamond">
-                    <div className="numTop">3</div>
-                    <div className="shape">
-                        <div className="diamond" />
+                    <div className="pokeman shapeDiamond">
+                        <div className="numTop">3</div>
+                        <div className="shape">
+                            <div className="diamond" />
+                        </div>
+                        <div className="numBtm">3</div>
                     </div>
-                    <div className="numBtm">3</div>
-                </div>
-                <div className="pokeman shapeLoyalty animate1">
-                    <div className="numTop">4</div>
-                    <div className="shape">
-                        <div className="loyalty" />
+                    <div className="pokeman shapeLoyalty animate1">
+                        <div className="numTop">4</div>
+                        <div className="shape">
+                            <div className="loyalty" />
+                        </div>
+                        <div className="numBtm">4</div>
                     </div>
-                    <div className="numBtm">4</div>
-                </div>
-                <div className="pokeman shapeHeart">
-                    <div className="numTop">2</div>
-                    <div className="shape">
-                        <div className="bing" />
-                        <div className="heart heart2" />
+                    <div className="pokeman shapeHeart">
+                        <div className="numTop">2</div>
+                        <div className="shape">
+                            <div className="bing" />
+                            <div className="heart heart2" />
+                        </div>
+                        <div className="numBtm">2</div>
                     </div>
-                    <div className="numBtm">2</div>
-                </div>
                 */}
-                <div>
-                    <a href="javascript: void 0" onClick={this.initCards}>庄发初始牌</a>
-                </div>
-                <div>
-                    <a href="javascript: void 0" onClick={this.dealCards.bind(this, 0)}>庄家要牌</a>
-                    <span>庄家牌面:<span>{this.state.player[0].pokes.join(',')}</span></span>
-                    <span style={{
-                        color: this.sum(this.state.player[0].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[0].pokes)}</span>
+                {/*
+                    <div>
+                        <a href="javascript: void 0" onClick={this.initCards}>庄发初始牌</a>
                     </div>
-                <div>
-                    <a href="javascript: void 0" onClick={this.dealCards.bind(this, 1)}>1号要牌</a>
-                    <span>1号牌面:<span>{this.state.player[1].pokes.join(',')}</span></span>
-                    <span style={{
-                        color: this.sum(this.state.player[1].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[1].pokes)}</span>
-                </div>
-                <div>
-                    <a href="javascript: void 0" onClick={this.dealCards.bind(this, 2)}>2号要牌</a>
-                    <span>2号牌面:<span>{this.state.player[2].pokes.join(',')}</span></span>
-                    <span style={{
-                        color: this.sum(this.state.player[2].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[2].pokes)}</span>
-                </div>
-                <div>
-                    <a href="javascript: void 0" onClick={this.dealCards.bind(this, 3)}>3号要牌</a>
-                    <span>3号牌面:<span>{this.state.player[3].pokes.join(',')}</span></span>
-                    <span style={{
-                        color: this.sum(this.state.player[3].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[3].pokes)}</span>
-                </div>
-                <div>
-                    <a href="javascript: void 0" onClick={this.dealCards.bind(this, 4)}>4号要牌</a>
-                    <span>4号牌面:<span>{this.state.player[4].pokes.join(',')}</span></span>
-                    <span style={{
-                        color: this.sum(this.state.player[4].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[4].pokes)}</span>
-                </div>
-            </div>
+                    <div>
+                        <a href="javascript: void 0" onClick={this.dealCards.bind(this, 0)}>庄家要牌</a>
+                        <span>庄家牌面:<span>{this.state.player[0].pokes.join(',')}</span></span>
+                        <span style={{
+                            color: this.sum(this.state.player[0].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[0].pokes)}</span>
+                        </div>
+                    <div>
+                        <a href="javascript: void 0" onClick={this.dealCards.bind(this, 1)}>1号要牌</a>
+                        <span>1号牌面:<span>{this.state.player[1].pokes.join(',')}</span></span>
+                        <span style={{
+                            color: this.sum(this.state.player[1].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[1].pokes)}</span>
+                    </div>
+                    <div>
+                        <a href="javascript: void 0" onClick={this.dealCards.bind(this, 2)}>2号要牌</a>
+                        <span>2号牌面:<span>{this.state.player[2].pokes.join(',')}</span></span>
+                        <span style={{
+                            color: this.sum(this.state.player[2].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[2].pokes)}</span>
+                    </div>
+                    <div>
+                        <a href="javascript: void 0" onClick={this.dealCards.bind(this, 3)}>3号要牌</a>
+                        <span>3号牌面:<span>{this.state.player[3].pokes.join(',')}</span></span>
+                        <span style={{
+                            color: this.sum(this.state.player[3].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[3].pokes)}</span>
+                    </div>
+                    <div>
+                        <a href="javascript: void 0" onClick={this.dealCards.bind(this, 4)}>4号要牌</a>
+                        <span>4号牌面:<span>{this.state.player[4].pokes.join(',')}</span></span>
+                        <span style={{
+                            color: this.sum(this.state.player[4].pokes) > 21 ? 'red' : 'blue'}}>总值: {this.sum(this.state.player[4].pokes)}</span>
+                    </div>
+                */}
             </div>);
     }
 }
