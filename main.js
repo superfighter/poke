@@ -60,17 +60,46 @@ class App extends Component{
         return (<div>
                 <div className="pannel">
                     <div className="banker">
-                        <div className="img" />
                         <div className="name" />
+                        <div className="points" />
+                        <div className="img" />
+                        <div className="position" data-index="B"/>
                     </div>
+                    {/*<div className="timer" />*/}
                     <div className="customer">
-                        <div className="position" data-index="1">
-                        </div>
-                        <div className="position" data-index="2">
+                        <div className="wrapper">
                             <div className="img" />
+                            <div className="position" data-index="1" />
                             <div className="name" />
+                            <div className="points" />
                         </div>
-
+                        <div className="wrapper">
+                            <div className="img" />
+                            <div className="position" data-index="1" />
+                            <div className="name" />
+                            <div className="points" />
+                        </div>
+                        <div className="wrapper">
+                            <div className="img" />
+                            <div className="position" data-index="1" />
+                            <div className="name" />
+                            <div className="points" />
+                        </div>
+                        <div className="wrapper">
+                            <div className="img" />
+                            <div className="position" data-index="1" />
+                            <div className="name" />
+                            <div className="points" />
+                        </div>
+                        <div className="wrapper">
+                            <div className="img" />
+                            <div className="position" data-index="1" />
+                            <div className="name" />
+                            <div className="points" />
+                        </div>
+                        {/*
+                        <div className="position" data-index="2">
+                        </div>
                         <div className="position" data-index="3">
                         </div>
 
@@ -79,6 +108,7 @@ class App extends Component{
 
                         <div className="position" data-index="5">
                         </div>
+                        */}
                     </div>
                 </div>
                 {/* <div className="heart" />
