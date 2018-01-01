@@ -59,6 +59,7 @@ class App extends Component{
         }
         return (<div>
                 <div className="pannel">
+                    <P shape="Club" className="p1 animate1" num="3"/>
                     <div className="banker">
                         <div className="name" />
                         <div className="points" />

@@ -86,6 +86,7 @@ body{
   position: relative;
   margin: 14% auto;
   width: 40%;
+  background-color: #FFF;
 }
 .bing{
   width: 30px;
@@ -258,7 +259,7 @@ body{
 .p1, .p2, .p3, .p4, .p5{
     position: absolute;
     top: 9px;
-    background: cornsilk;
+    background: #FFF;
 }
 .p1 {
   left: 0;
@@ -282,16 +283,17 @@ body{
 }
 /** poke animate **/
 .animate1 {
-  animation: a1 2s forwards ease-in;
+  animation: a1 1s forwards ease-in;
   transform: translate(400px)
 }
 @keyframes a1{
   from {
     /*margin-left: 0;*/
-    transform: rotate(0) scale(0) translateX(0) translateY(0)
+    transform: scale(0) translateX(0) translateY(0)
   }
   to {
     /*margin-left: 100px;*/
-    transform: rotate(1080deg) scale(1) translateX(100px) translateY(50px)
+    transform: scale(1) translateX(100px) translateY(476px);
+    z-index: 7;
   }
 }
