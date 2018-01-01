@@ -63,37 +63,43 @@ class App extends Component{
                         <div className="name" />
                         <div className="points" />
                         <div className="img" />
-                        <div className="position" data-index="B"/>
+                        <div className="position" data-index="B">
+                                <P shape="Diamond" className="p1" num="9"/>
+                                <P shape="Diamond" className="p2" num="10"/>
+                                <P shape="Diamond" className="p3" num="3"/>
+                                <P shape="Diamond" className="p4" num="2"/>
+                                <P shape="Diamond" className="p5" num="7"/>
+                        </div>
                     </div>
                     {/*<div className="timer" />*/}
                     <div className="customer">
                         <div className="wrapper">
                             <div className="img" />
-                            <div className="position" data-index="1" />
+                            <div className="position" data-index="1">
+                                <P shape="Diamond" className="p1" num="9"/>
+                                <P shape="Diamond" className="p2" num="10"/>
+                                <P shape="Diamond" className="p3" num="3"/>
+                                <P shape="Diamond" className="p4" num="2"/>
+                                <P shape="Diamond" className="p5" num="7"/>
+                            </div>
                             <div className="name" />
                             <div className="points" />
                         </div>
                         <div className="wrapper">
                             <div className="img" />
-                            <div className="position" data-index="1" />
+                            <div className="position" data-index="2" />
                             <div className="name" />
                             <div className="points" />
                         </div>
                         <div className="wrapper">
                             <div className="img" />
-                            <div className="position" data-index="1" />
+                            <div className="position" data-index="3" />
                             <div className="name" />
                             <div className="points" />
                         </div>
                         <div className="wrapper">
                             <div className="img" />
-                            <div className="position" data-index="1" />
-                            <div className="name" />
-                            <div className="points" />
-                        </div>
-                        <div className="wrapper">
-                            <div className="img" />
-                            <div className="position" data-index="1" />
+                            <div className="position" data-index="4" />
                             <div className="name" />
                             <div className="points" />
                         </div>
@@ -113,8 +119,8 @@ class App extends Component{
                 </div>
                 {/* <div className="heart" />
                 <div className="heart heart2" />
-                <div className="diamond" />*/}
-                <P shape="Diamond" num="9"/>
+                <div className="diamond" />
+                <P shape="Diamond" num="9"/> */}
                 {/*
                     <div className="pokeman shapeClub">
                         <div className="numTop">A</div>

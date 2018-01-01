@@ -12,7 +12,7 @@ class P extends Component{
     let {num, shape = 'Club'} = this.props;
     let bing = shape === 'Heart' || shape === 'Club'; 
     return (
-      <div className={'pokeman shape' + shape}>
+      <div className={'pokeman shape' + shape + ' ' + this.props.className}>
           <div className="numTop">{num}</div>
           <div className="shape">
               {bing &&
