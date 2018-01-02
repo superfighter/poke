@@ -45,7 +45,7 @@ class POKE {
         console.log(this.seed);
         console.log(this.poke[curColor]);
         console.log('剩余' + this.total + '张');
-        return out[0];
+        return curColor + '' + out[0]; // 03 [花色][牌面]
       } else {
         console.log('要发的牌没有了');
       }

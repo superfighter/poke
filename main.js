@@ -6,6 +6,12 @@ import Event from './lib/EventEmitter';
 import Boss from './asserts/B';
 import P from './asserts/P';
 import './asserts/app.css';
+const SHAPES = {
+    '0': 'Heart',
+    '1': 'Club',
+    '2': 'Diamond',
+    '3': 'Loyalty'
+} 
 class App extends Component{
     constructor() {
         super();
@@ -36,7 +42,7 @@ class App extends Component{
         this.initCards = this.initCards.bind(this);
     }
     componentDidMount() {
-        // this.E.emit('init');
+        this.E.emit('init');
     }
     handleDealCards() {
         this.setState({
@@ -54,68 +60,81 @@ class App extends Component{
         this.E.emit('init');
     }
     render() {
-        let styles = {
-
-        }
         return (<div>
                 <div className="pannel">
-                    <P shape="Club" className="p1 animate1" num="3"/>
+                    {/* <P shape="Heart" className="p1 animate1" num="3"/>*/}
                     <div className="banker">
                         <div className="name" />
                         <div className="points" />
-                        <div className="img" />
+                        <div className="img">
+                            {this.sum(this.state.player[0].pokes)}
+                        </div>
                         <div className="position" data-index="B">
-                                <P shape="Diamond" className="p1" num="9"/>
-                                <P shape="Diamond" className="p2" num="10"/>
-                                <P shape="Diamond" className="p3" num="3"/>
-                                <P shape="Diamond" className="p4" num="2"/>
-                                <P shape="Diamond" className="p5" num="7"/>
+                                {this.state.player[0].pokes && 
+                                    this.state.player[0].pokes.map((data, index) => {
+                                        return <P shape={SHAPES[data.substr(0, 1)]} className={'p' + ++index} num={data.substr(1)}/>
+                                    })
+                                }
                         </div>
                     </div>
                     {/*<div className="timer" />*/}
                     <div className="customer">
                         <div className="wrapper">
-                            <div className="img" />
+                            <div className="img">
+                                {this.sum(this.state.player[1].pokes)}
+                            </div>
                             <div className="position" data-index="1">
-                                <P shape="Diamond" className="p1" num="9"/>
-                                <P shape="Diamond" className="p2" num="10"/>
-                                <P shape="Diamond" className="p3" num="3"/>
-                                <P shape="Diamond" className="p4" num="2"/>
-                                <P shape="Diamond" className="p5" num="7"/>
+                                {this.state.player[1].pokes && 
+                                    this.state.player[1].pokes.map((data, index) => {
+                                        return <P shape={SHAPES[data.substr(0, 1)]} className={'p' + ++index} num={data.substr(1)}/>
+                                    })
+                                }
                             </div>
                             <div className="name" />
                             <div className="points" />
                         </div>
                         <div className="wrapper">
-                            <div className="img" />
-                            <div className="position" data-index="2" />
+                            <div className="img">
+                                {this.sum(this.state.player[2].pokes)}
+                            </div>
+                            <div className="position" data-index="2">
+                                {this.state.player[2].pokes && 
+                                    this.state.player[2].pokes.map((data, index) => {
+                                        return <P shape={SHAPES[data.substr(0, 1)]} className={'p' + ++index} num={data.substr(1)}/>
+                                    })
+                                }
+                            </div>
                             <div className="name" />
                             <div className="points" />
                         </div>
                         <div className="wrapper">
-                            <div className="img" />
-                            <div className="position" data-index="3" />
+                            <div className="img">
+                                {this.sum(this.state.player[3].pokes)}
+                            </div>
+                            <div className="position" data-index="3">
+                                {this.state.player[3].pokes && 
+                                    this.state.player[3].pokes.map((data, index) => {
+                                        return <P shape={SHAPES[data.substr(0, 1)]} className={'p' + ++index} num={data.substr(1)}/>
+                                    })
+                                }
+                            </div>
                             <div className="name" />
                             <div className="points" />
                         </div>
                         <div className="wrapper">
-                            <div className="img" />
-                            <div className="position" data-index="4" />
+                            <div className="img">
+                                {this.sum(this.state.player[4].pokes)}
+                            </div>
+                            <div className="position" data-index="4">
+                                {this.state.player[4].pokes && 
+                                    this.state.player[4].pokes.map((data, index) => {
+                                        return <P shape={SHAPES[data.substr(0, 1)]} className={'p' + ++index} num={data.substr(1)}/>
+                                    })
+                                }
+                            </div>
                             <div className="name" />
                             <div className="points" />
                         </div>
-                        {/*
-                        <div className="position" data-index="2">
-                        </div>
-                        <div className="position" data-index="3">
-                        </div>
-
-                        <div className="position" data-index="4">
-                        </div>
-
-                        <div className="position" data-index="5">
-                        </div>
-                        */}
                     </div>
                 </div>
                 {/* <div className="heart" />

@@ -131,10 +131,10 @@ body{
   transform: translateX(1px) translateY(-2px) rotate(135deg);
 }
 .shapeHeart .shape{
-  margin: 10% auto;
+  margin: 16% auto;
 }
 .shapeDiamond .shape{
-  margin: 10% auto;
+  margin: 16% auto;
 }
 .shapeHeart .heart2:after{
   top: 0;
@@ -148,11 +148,11 @@ body{
     margin-left: 2px;
 }
 .shapeDiamond .shape{
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 7px;
+  margin-bottom: 4px;
 }
 .shapeLoyalty .shape{
-  margin: 10% auto;
+  margin: 16% auto;
 }
 .shapeLoyalty .loyalty{
   margin: 10% 6px;
@@ -192,6 +192,9 @@ body{
   background: blueviolet;
   display: block;
   margin: 1rem auto;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 3rem;
 }
 .banker .name, .banker .points{
   width: 5rem;
@@ -247,6 +250,9 @@ body{
     background: #8a2be2;
     display: block;
     margin: 1rem auto;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 3rem;
 }
 .wrapper .name, .wrapper .points{
     width: 5rem;

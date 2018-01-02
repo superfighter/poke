@@ -45,7 +45,8 @@ class Boss {
   }
   sum(ary) {
       if (!ary.length) return 0;
-      let materialAry = ary.map(data => data * 1 > 10 ? 10 : data * 1);
+      let materialAry = ary.map(data => data.substr(1) * 1 > 10 ? 10 : data.substr(1) * 1);
+      console.log(materialAry);
       const reducer = (accumulator, currentValue) => accumulator + currentValue;
       return materialAry.reduce(reducer);
   }
