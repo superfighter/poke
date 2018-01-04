@@ -60,12 +60,17 @@ class App extends Component{
         this.E.emit('init');
     }
     render() {
+        console.log(this.B);
         return (<div>
                 <div className="pannel">
                     {/* <P shape="Heart" className="p1 animate1" num="3"/>*/}
                     <div className="banker">
-                        <div className="name" />
-                        <div className="points" />
+                        <div className="name">
+                            {this.B.player[0].name}
+                        </div>
+                        <div className="points">
+                            {this.B.player[0].points}
+                        </div>
                         <div className="img">
                             {this.sum(this.state.player[0].pokes)}
                         </div>
@@ -90,8 +95,12 @@ class App extends Component{
                                     })
                                 }
                             </div>
-                            <div className="name" />
-                            <div className="points" />
+                            <div className="name">
+                                {this.B.player[1].name}
+                            </div>
+                            <div className="points">
+                                {this.B.player[1].points}
+                            </div>
                         </div>
                         <div className="wrapper">
                             <div className="img">
@@ -104,8 +113,12 @@ class App extends Component{
                                     })
                                 }
                             </div>
-                            <div className="name" />
-                            <div className="points" />
+                            <div className="name">
+                                {this.B.player[2].name}
+                            </div>
+                            <div className="points">
+                                {this.B.player[2].points}
+                            </div>
                         </div>
                         <div className="wrapper">
                             <div className="img">
@@ -118,8 +131,12 @@ class App extends Component{
                                     })
                                 }
                             </div>
-                            <div className="name" />
-                            <div className="points" />
+                            <div className="name">
+                                {this.B.player[3].name}
+                            </div>
+                            <div className="points">
+                                {this.B.player[3].points}
+                            </div>
                         </div>
                         <div className="wrapper">
                             <div className="img">
@@ -132,8 +149,12 @@ class App extends Component{
                                     })
                                 }
                             </div>
-                            <div className="name" />
-                            <div className="points" />
+                            <div className="name">
+                                {this.B.player[4].name}
+                            </div>
+                            <div className="points">
+                                {this.B.player[4].points}
+                            </div>
                         </div>
                     </div>
                 </div>

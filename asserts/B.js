@@ -13,9 +13,10 @@ class Boss {
   }
   init() {
     console.info('===~初始化老板~===');
-    this.player = this.player.map(data => {
+    this.player = this.player.map((data, index) => {
       return new Owner({
-        name: 'robots' + data
+        name: 'robots' + data,
+        points: (index + 1) * 100
       });
     });
     this.player.unshift(new Owner({

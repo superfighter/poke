@@ -84,7 +84,7 @@ body{
 }
 .shape{
   position: relative;
-  margin: 14% auto;
+  margin: 20% auto;
   width: 40%;
   background-color: #FFF;
 }
@@ -199,6 +199,8 @@ body{
 .banker .name, .banker .points{
   width: 5rem;
   height: 2rem;
+  line-height: 2rem;
+  text-align: center;
   background: orange;
   display: block;
   margin: .5rem auto;
@@ -257,6 +259,8 @@ body{
 .wrapper .name, .wrapper .points{
     width: 5rem;
     height: 2rem;
+    line-height: 2rem;
+    text-align: center;
     background: orange;
     display: block;
     margin: .5rem auto;

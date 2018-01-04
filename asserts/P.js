@@ -12,7 +12,7 @@ class P extends Component{
     let {num, shape = 'Club'} = this.props;
     let bing = shape === 'Heart' || shape === 'Club';
     let subClassName = shape.toLowerCase();
-    if (shape === 'heart') {
+    if (subClassName === 'heart') {
       subClassName = subClassName + ' heart2';
     }
     return (
