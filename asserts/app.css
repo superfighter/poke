@@ -291,6 +291,10 @@ body{
   left: 80px;
   z-index: 5;
 }
+.img.boom {
+  background: slategray;
+  color: #FFF;
+}
 /** poke animate **/
 .animate1 {
   animation: a1 1s forwards ease-in;

@@ -8,7 +8,7 @@ class Boss {
   constructor(option) {
     console.info('===<加载老板>===');
     this.K = new POKE();
-    this.player = [1,2,3,4];
+    this.player = [1,2,3]; // [1,2,3,4];
     this.init();
   }
   init() {
