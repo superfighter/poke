@@ -73,7 +73,6 @@ class App extends Component{
     }
     dealCards(to) {
         this.B.dealCards(to);
-        debugger;
         this.B.emit('trial', [to, () => {
             let trialResult = [];
             this.B.player.map((player, index) => {
@@ -86,7 +85,6 @@ class App extends Component{
             if (end) {
                 console.group('after trial');
                 console.log(this);
-                debugger;
                 console.groupEnd('after trial');
                 // this.setState({
                 //     player: 

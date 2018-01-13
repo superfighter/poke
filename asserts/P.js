@@ -15,6 +15,15 @@ class P extends Component{
     if (subClassName === 'heart') {
       subClassName = subClassName + ' heart2';
     }
+    if (num === '11') {
+      num = 'J';
+    } else if (num === '12') {
+      num = 'Q';
+    } else if (num === '13') {
+      num = 'K';
+    } else if (num === '1') {
+      num = 'A';
+    }
     return (
       <div className={'pokeman shape' + shape + ' ' + this.props.className}>
           <div className="numTop">{num}</div>
