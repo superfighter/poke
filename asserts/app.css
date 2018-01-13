@@ -179,7 +179,7 @@ body{
   margin: 0 auto;
   overflow: hidden;
   display: block;
-  height: 23rem;
+  height: 24rem;
 }
 .banker .position{
   width: 100%;
@@ -207,7 +207,7 @@ body{
 }
 .customer{
   position: absolute;
-  bottom: 13rem;
+  bottom: 15rem;
   width: 100%;
   height: 10rem;
   background: orangered;

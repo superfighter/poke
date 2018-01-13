@@ -58,7 +58,7 @@ class App extends Component{
         this.E.on('init', () => {
             this.B.initCards();
             this.handleDealCards();
-        })
+        });
         this.dealCards = this.dealCards.bind(this);
         this.initCards = this.initCards.bind(this);
         this.giveup = this.giveup.bind(this);
@@ -73,6 +73,26 @@ class App extends Component{
     }
     dealCards(to) {
         this.B.dealCards(to);
+        debugger;
+        this.B.emit('trial', [to, () => {
+            let trialResult = [];
+            this.B.player.map((player, index) => {
+                index > 0 &&
+                trialResult.push(player.warState);
+            });
+            let end = trialResult.every(data => {
+                return data === '2';
+            });
+            if (end) {
+                console.group('after trial');
+                console.log(this);
+                debugger;
+                console.groupEnd('after trial');
+                // this.setState({
+                //     player: 
+                // });
+            }
+        }]);
         this.handleDealCards();
     }
     sum(ary) {
@@ -131,7 +151,7 @@ class App extends Component{
                             this.state.player.map((data, index) => {
                                 let sumClassName = 'img ';
                                 let sum = this.sum(data.pokes);
-                                if (sum > 21) {
+                                if (sum > 21 || data.warState === '2') {
                                     sumClassName = sumClassName + 'boom';
                                 }
                                 return index > 0 && (<div className="wrapper">

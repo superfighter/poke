@@ -7,6 +7,7 @@ class Owner {
     this.name = option && option.name || 'robots';
     this.points = option && option.points || 0;
     this.pokes = [];
+    this.warState = '0'; // 0:没结算 1:结算赢 2:结算输
     this.init();
   }
   init() {

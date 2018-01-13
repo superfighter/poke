@@ -1,11 +1,12 @@
 import POKE from './K';
 import Owner from './O';
-import Event from '../lib/EventEmitter';
+import T from './T';
 /**
  * 老板【管理者昵称】
  */
-class Boss {
+class Boss extends T{
   constructor(option) {
+    super();
     console.info('===<加载老板>===');
     this.K = new POKE();
     this.player = [1,2,3]; // [1,2,3,4];
@@ -64,6 +65,7 @@ class Boss {
     this.player[to].pokes.push(poke);
     console.log('发「' + poke + '」牌给' + to);
   }
+
 }
 
 module.exports = Boss;
