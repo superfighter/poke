@@ -149,8 +149,12 @@ class App extends Component{
                             this.state.player.map((data, index) => {
                                 let sumClassName = 'img ';
                                 let sum = this.sum(data.pokes);
-                                if (sum > 21 || data.warState === '2') {
+                                if (sum > 21) {
                                     sumClassName = sumClassName + 'boom';
+                                } else if (data.warState === '1') {
+                                    sumClassName = sumClassName + 'winner';
+                                } else if (data.warState === '2') {
+                                    sumClassName = sumClassName + 'looser';
                                 }
                                 return index > 0 && (<div className="wrapper">
                                             <div className="operate">

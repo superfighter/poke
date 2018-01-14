@@ -48,11 +48,23 @@ class T extends Event{
         } else if (sb - sp > 0) {
           player.warState = '2';
         }
+        this.pay(player);
         // console.log(player.name + ' sum==>' + sp);
         // console.log('Boss sum==>' + sb);
         // console.log(sb - sp);
       }
     })
+  }
+  pay(player) {
+    let result = 0;
+    if (player.warState === '1') {
+      player.points = player.points + player.points;
+    } else if (player.warState === '2') {
+      player.points = player.points - player.points;
+      if (result < 0) {
+        console.warn(player.name + ' has no points >-00-<');
+      }
+    }
   }
 }
 

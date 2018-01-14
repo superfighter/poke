@@ -291,9 +291,13 @@ body{
   left: 80px;
   z-index: 5;
 }
-.img.boom {
+.img.boom, .img.looser {
   background: slategray;
   color: #FFF;
+}
+.img.winner {
+  color: #FFF;
+  background: chartreuse;
 }
 /** poke animate **/
 .animate1 {
