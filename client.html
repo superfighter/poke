@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>WebSocket Echo Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script>
+    var ws = new WebSocket("ws://localhost:8886");
+    // ws.onopen = function (e) {
+    //     console.log('Connection to server opened');
+    // }
+    // ws.onmessage = function (e) {
+    //     console.log('Receive ');
+    //     console.log(e.data);
+    //     var index = document.querySelectorAll('li').length;
+    //     var li = document.createElement('li');
+    //     li.innerHTML = index + '==》' + e.data;
+    //     document.querySelector('ul').appendChild(li);
+    // }
+    function sendMessage() {
+        ws.send(document.querySelector('#message').value);
+    }
+    var isClose = false;
+    var stocks = {
+        "AAPL": 0, "MSFT": 0, "AMZN": 0, "GOOG": 0, "YHOO": 0
+    };
+    var stock_request = {'stocks': ['AAPL', 'MSFT', 'AMZN', 'GOOG', 'YHOO']};
+    function updataUI() {
+        ws.onopen = function (e) {
+            console.log('Connection to server opened');
+            isClose = false;
+            ws.send(JSON.stringify(stock_request));
+            console.log("sened a mesg");
+        }
+        //更新UI
+        var changeStockEntry = function (symbol, originalValue, newValue) {
+            var valElem = document.querySelector('#' + symbol + ' span');
+            valElem.innerHTML = (newValue.toFixed(2));
+            if (newValue < originalValue) {
+                valElem.classList.add('label-danger');
+                valElem.classList.remove('label-success');
+            } else if (newValue > originalValue) {
+                valElem.classList.add('label-success');
+                valElem.classList.remove('label-danger');
+            }
+        }
+        // 处理受到的消息
+        ws.onmessage = function (e) {
+            var stocksData = JSON.parse(e.data);
+            console.log(stocksData);
+            for (var symbol in stocksData) {
+                if (stocksData.hasOwnProperty(symbol)) {
+                    changeStockEntry(symbol, stocks[symbol], stocksData[symbol]);
+                    stocks[symbol] = stocksData[symbol];
+                }
+            }
+        };
+    }
+
+    updataUI();
+    </script>
+</head>
+
+<body >
+    <div class="vertical-center">
+        <div class="container">
+            <p>&nbsp;</p>
+            <form role="form" id="chat_form" onsubmit="sendMessage(); return false;">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="message" id="message"
+                           placeholder="Type text to echo in here" value="" />
+                </div>
+                <ul>
+                </ul>
+                <div id="AAPL">
+                    <i>AAPL</i>
+                    <span></span>
+                </div>
+                <div id="MSFT">
+                    <i>MSFT</i>
+                    <span></span>
+                </div>
+                <div id="AMZN">
+                    <i>AMZN</i>
+                    <span></span>
+                </div>
+                <div id="GOOG">
+                    <i>AMZN</i>
+                    <span></span>
+                </div>
+                <div id="YHOO">
+                    <i>YHOO</i>
+                    <span></span>
+                </div>
+                <button type="button" id="send" class="btn btn-primary"
+                        onclick="sendMessage();">
+                    Send!
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
